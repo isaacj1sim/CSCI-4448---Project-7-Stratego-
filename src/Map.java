@@ -1,6 +1,7 @@
 public class Map {
-    int[][] array = new int[10][10];
-    int[][] color = new int[10][10];
+    private final int size = 10;
+    int[][] array = new int[size][size];
+    int[][] color = new int[size][size];
 
     public Map(){
         for(int i = 0; i < 10; i++){

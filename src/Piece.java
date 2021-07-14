@@ -1,12 +1,12 @@
 public class Piece {
-    int number;
+    int number_value;
     String color;
     int[] position = new int[2];
 
-    //number from -1 - 10. -1 = bomb, 0 = flag, 1 = spy, 2 = scout, 3 = miner
+    //number_value from -1 - 10. -1 = bomb, 0 = flag, 1 = spy, 2 = scout, 3 = miner
     //index converts to a two dimensional coordinate
     public Piece(int n, String c, int index){
-        number = n;
+        number_value = n;
         color = c;
         //index 0 - 9 is first row
         //index 10-19 is second row
@@ -17,7 +17,7 @@ public class Piece {
     }
 
     public int getNumber(){
-        return number;
+        return number_value;
     }
 
     public int[] getPosition(){
