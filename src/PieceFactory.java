@@ -1,5 +1,5 @@
 public class PieceFactory {
-    public Piece getPiece(int number, String color){
-        return new Piece(number, color);
+    public Piece getPiece(int number, String color, int index){
+        return new Piece(number, color, index);
     }
 }

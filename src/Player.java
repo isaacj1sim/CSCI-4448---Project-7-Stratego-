@@ -2,6 +2,7 @@ import java.util.List;
 
 public class Player {
     String name; 
+    String color;
     List<Piece> pieces;
 
     public Player(String n){
