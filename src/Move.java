@@ -49,5 +49,11 @@ public class Move {
         this.isDefendWin = bool;
     }
 
-    public void setStartPoint(int x)
+    public void setStartPoint(int xPoint, int yPoint){
+        startPoint = new Point(xPoint, yPoint);
+    }
+
+    public void setEndPoint(int xPoint, int yPoint){
+        endPoint = new Point(xPoint, yPoint);
+    }
 }
