@@ -73,19 +73,20 @@ public class Map {
     }
 
     //check if a move is valid, and then update the map accordingly
+    //prev is the square the moving piece was, and now is the square
+    //the piece is trying to move to
     public boolean movePiece(int[] prev, int[] now){
         //calculate if the positions are adjacent
         int x = prev[0] - now[0];
         int y = prev[1] - now[1];
         int a = x + y;
         //check if the move is diagonal
-        boolean diag = false;
         if(x != 0 && y != 0){
-            diag = true;
+            return false;
         }
         //cannot move into lake
         //cannot move bomb or flag pieces
-        if(array[now[0]][now[1]] == -3 || array[prev[0]][prev[1]] == -1 || array[prev[0]][prev[1]] == 0){
+        else if(array[now[0]][now[1]] == -3 || array[prev[0]][prev[1]] == -1 || array[prev[0]][prev[1]] == 0){
             return false;
         }
         //cannot move a piece onto a piece of the same color
@@ -98,9 +99,6 @@ public class Map {
             return false;
         }
         //cannot move a piece diagonally
-        else if(diag){
-            return false;
-        }
         else{
             if(array[now[0]][now[1]] == -1){
                 //if a piece that is a miner moves onto a square with a bomb
@@ -117,6 +115,7 @@ public class Map {
             }
             //if the piece is the scout, make sure it doesn't go over lakes.
             else if(array[prev[0]][prev[1]] == 2){
+                //making a move horizontally over the lake
                 if(x != 0){
                     if(prev[0] == 4 || prev[0] == 5){
                         if(prev[1] <= 3 && now[1] >= 2){
@@ -133,6 +132,7 @@ public class Map {
                         }
                     }
                 }
+                //making a move vertically over the lake
                 else if(y != 0){
                     if(prev[1] == 2 || prev[1] == 3 || prev[1] == 6 || prev[1] == 7){
                         if(prev[0] <= 5 && now[0] >= 4){
@@ -144,6 +144,9 @@ public class Map {
                     }
                 }
             }
+            //now all the rules have been gone over and the piece is able
+            //to actually make a move
+            
             //if the value of the piece1 in the previuos square is greater than
             //the piece2 currently in the square, piece1 replaces piece2
             //otherwise, piece2 remains
