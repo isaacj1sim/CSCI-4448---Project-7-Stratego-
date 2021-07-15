@@ -14,7 +14,8 @@ public class Game {
         red = new ArrayList<Piece>();
         blue = new ArrayList<Piece>();
         cont = true;
-        
+
+        //number_of_pieces corresponds to the amount of each category of pieces
         int[] number_of_piece = {6, 1, 1, 8, 5, 4, 4, 4, 3, 2, 1, 1};
         int redIndex = 0;
         int blueIndex = 99;
