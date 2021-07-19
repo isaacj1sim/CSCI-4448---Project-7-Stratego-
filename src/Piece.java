@@ -1,3 +1,5 @@
+import java.awt.Point;
+
 public class Piece {
 
     /**
@@ -7,23 +9,30 @@ public class Piece {
     String color;
     String pieceName;
     int number_value;
-    int[] position = new int[2];
+    Point position;
+    //whether or not the opposing player knows the value of the piece
+    boolean revealed;
 
 
     //number_value from -1 - 10. -1 = bomb, 0 = flag, 1 = spy, 2 = scout, 3 = miner
     //index converts to a two dimensional coordinate
     public Piece(int num, String c, int index){
+        revealed = false;
         number_value = num;
         color = c;
         //index 0 - 9 is first row
         //index 10-19 is second row
         //index 20-29 is third row
         //index 30-39 is fourth row
-        position[0] = index / 10; //get row
-        position[1] = index % 10; //get column
+        int x = index / 10; //get row
+        int y = index % 10; //get column
+        position = new Point(x,y);
 
         //Adds name for Piece from number_value
         switch(number_value){
+            case -3:
+                pieceName = "Lake";
+                break;
             case -1:
                 pieceName = "Bomb";
                 break;
@@ -69,7 +78,7 @@ public class Piece {
         return number_value;
     }
 
-    public int[] getPosition(){
+    public Point getPosition(){
         return position;
     }
 
@@ -79,5 +88,13 @@ public class Piece {
 
     public String getPieceName() {
         return pieceName;
+    }
+
+    public void revealed(){
+        revealed = true;
+    }
+
+    public void conceal(){
+        revealed = false;
     }
 }

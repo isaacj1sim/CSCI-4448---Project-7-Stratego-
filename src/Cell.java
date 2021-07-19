@@ -7,6 +7,7 @@ import java.awt.Point;
 
 public class Cell {
     //position of the cell on the board
+    //
     private Point position_on_board;
 
     //contains the Piece that is currently on cell or null for nothing.
@@ -21,7 +22,19 @@ public class Cell {
         piece_on_cell = piece;
     }
 
+    public void emptyCell(){
+        piece_on_cell = null;
+    }
+
     public Piece getPiece(){
         return piece_on_cell;
+    }
+
+    public int getPieceValue(){
+        return piece_on_cell.getNumber();
+    }
+
+    public String getPieceColor(){
+        return piece_on_cell.getColor();
     }
 }

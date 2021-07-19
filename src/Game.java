@@ -33,6 +33,12 @@ public class Game {
         for(Piece p : blue){
             map.setPiecePosition(p);
         }
+
+        int[] lakeIndex = {42,43,46,47,52,53,56,57};
+        for(int i : lakeIndex){
+            map.setPiecePosition(pFact.getPiece(-3, "", i));
+        }
+
         map.display();
     }
 
