@@ -17,11 +17,11 @@ public class Cell {
         Point position_on_board = new Point(x_coordinate, y_coordinate);
     }
 
-    public setPiece(Piece piece){
+    public void setPiece(Piece piece){
         piece_on_cell = piece;
     }
 
-    public void getPiece(){
+    public Piece getPiece(){
         return piece_on_cell;
     }
 }
