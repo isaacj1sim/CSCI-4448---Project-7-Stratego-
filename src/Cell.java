@@ -15,7 +15,11 @@ public class Cell {
     //pass in x and y coordinate to initialize the Point coordinates of each cell
     public Cell(int x_coordinate, int y_coordinate){
         Point position_on_board = new Point(x_coordinate, y_coordinate);
+    }
 
+    //Overloaded Constructor for only updating piece
+    public Cell(Piece piece){
+        piece_on_cell = piece;
     }
 
 }
