@@ -37,4 +37,8 @@ public class Cell {
     public String getPieceColor(){
         return piece_on_cell.getColor();
     }
+
+    public boolean getPieceRevealed(){
+        return piece_on_cell.getRevealed();
+    }
 }

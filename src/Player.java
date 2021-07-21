@@ -13,7 +13,15 @@ public class Player {
         pieces = p;
     }
 
+    public void setColor(String c){
+        color = c;
+    }
+
     public List<Piece> getPieces(){
         return pieces;
+    }
+
+    public String getColor(){
+        return color;
     }
 }

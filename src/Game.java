@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.awt.Point;
 
 public class Game {
     private static Game instance = null;
@@ -39,7 +40,7 @@ public class Game {
             map.setPiecePosition(pFact.getPiece(-3, "", i));
         }
 
-        map.display();
+        map.display("");
     }
 
     public static synchronized Game getInstance(){
@@ -47,6 +48,23 @@ public class Game {
             instance = new Game();
         }
         return instance;
+    }
+
+    public void reset(){
+        cont = true;
+        for(Piece p : red){
+            map.setPiecePosition(p);
+        }
+        for(Piece p : blue){
+            map.setPiecePosition(p);
+        }
+
+        int[] lakeIndex = {42,43,46,47,52,53,56,57};
+        for(int i : lakeIndex){
+            map.setPiecePosition(pFact.getPiece(-3, "", i));
+        }
+
+        map.display("");
     }
 
     public List<Piece> getPieces(String color){
@@ -61,5 +79,17 @@ public class Game {
     public boolean getCont(){
         return cont;
     }
+    
+    public void end(){
+        cont = false;
+    }
 
+    public void display(String color){
+        map.display(color);
+    }
+
+    public boolean movePiece(String color, Point start, Point end){
+        //if 
+        return true;
+    }
 }

@@ -90,7 +90,11 @@ public class Piece {
         return pieceName;
     }
 
-    public void revealed(){
+    public boolean getRevealed(){
+        return revealed;
+    }
+
+    public void reveal(){
         revealed = true;
     }
 

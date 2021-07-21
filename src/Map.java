@@ -19,41 +19,144 @@ public class Map {
         array[(int)x][(int)y].setPiece(p);
     }
 
-    public void display(){
-        for(int i = 0; i < 10; i++){
-            System.out.print("| ");
-            for(int j = 0; j < 10; j ++){
-                //If the cell is empty, print out an empty space
-                if(array[i][j].getPiece() == null){
-                    System.out.print("  ");
-                }
-                //otherwise print out the value of the piece occupying the cell
-                else{
-                    //switch statement for printing out special piece values (lake, bomb, flag, spy, marshal)
-                    switch(array[i][j].getPieceValue()){
-                        case -3:
-                            System.out.print("# ");
-                            break;
-                        case -1:
-                            System.out.print("B ");
-                            break;
-                        case 0:
-                            System.out.print("F ");
-                            break;
-                        case 1:
-                            System.out.print("S ");
-                            break;
-                        case 10:
-                            System.out.print("0 ");
-                            break;
-                        //default: just print the value of the piece
-                        default:
-                            System.out.print(array[i][j].getPieceValue() + " ");
-                            break;
+    public void display(String color){
+        //if the display is for the player with the red pieces
+        if(color.equalsIgnoreCase("RED")){
+            System.out.print("   ");
+            for(int i = 0; i < 10; i++){
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            for(int i = 0; i < 10; i++){
+                System.out.print(i);
+                System.out.print("| ");
+                for(int j = 0; j < 10; j ++){
+                    //If the cell is empty, print out an empty space
+                    if(array[i][j].getPiece() == null){
+                        System.out.print("  ");
+                    }
+                    else if(array[i][j].getPieceColor().equalsIgnoreCase("BLUE") && !array[i][j].getPieceRevealed()){
+                        System.out.print("+ ");
+                    }
+                    //otherwise print out the value of the piece occupying the cell
+                    else{
+                        //switch statement for printing out special piece values (lake, bomb, flag, spy, marshal)
+                        switch(array[i][j].getPieceValue()){
+                            case -3:
+                                System.out.print("# ");
+                                break;
+                            case -1:
+                                System.out.print("B ");
+                                break;
+                            case 0:
+                                System.out.print("F ");
+                                break;
+                            case 1:
+                                System.out.print("S ");
+                                break;
+                            case 10:
+                                System.out.print("0 ");
+                                break;
+                            //default: just print the value of the piece
+                            default:
+                                System.out.print(array[i][j].getPieceValue() + " ");
+                                break;
+                        }
                     }
                 }
+                System.out.println("|");
             }
-            System.out.println("|");
+        }
+        //if the display is for the player with the blue pieces
+        else if(color.equalsIgnoreCase("BLUE")){
+            System.out.print("   ");
+            for(int i = 0; i < 10; i++){
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            for(int i = 0; i < 10; i++){
+                System.out.print(i);
+                System.out.print("| ");
+                for(int j = 0; j < 10; j ++){
+                    //If the cell is empty, print out an empty space
+                    if(array[i][j].getPiece() == null){
+                        System.out.print("  ");
+                    }
+                    else if(array[i][j].getPieceColor().equalsIgnoreCase("RED") && !array[i][j].getPieceRevealed()){
+                        System.out.print("+ ");
+                    }
+                    //otherwise print out the value of the piece occupying the cell
+                    else{
+                        //switch statement for printing out special piece values (lake, bomb, flag, spy, marshal)
+                        switch(array[i][j].getPieceValue()){
+                            case -3:
+                                System.out.print("# ");
+                                break;
+                            case -1:
+                                System.out.print("B ");
+                                break;
+                            case 0:
+                                System.out.print("F ");
+                                break;
+                            case 1:
+                                System.out.print("S ");
+                                break;
+                            case 10:
+                                System.out.print("0 ");
+                                break;
+                            //default: just print the value of the piece
+                            default:
+                                System.out.print(array[i][j].getPieceValue() + " ");
+                                break;
+                        }
+                    }
+                }
+                System.out.println("|");
+            }
+        }
+        //show full board
+        else{
+            System.out.print("   ");
+            for(int i = 0; i < 10; i++){
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            for(int i = 0; i < 10; i++){
+                System.out.print(i);
+                System.out.print("| ");
+                for(int j = 0; j < 10; j ++){
+                    //If the cell is empty, print out an empty space
+                    if(array[i][j].getPiece() == null){
+                        System.out.print("  ");
+                    }
+                    //otherwise print out the value of the piece occupying the cell
+                    else{
+                        //switch statement for printing out special piece values (lake, bomb, flag, spy, marshal)
+                        switch(array[i][j].getPieceValue()){
+                            case -3:
+                                System.out.print("# ");
+                                break;
+                            case -1:
+                                System.out.print("B ");
+                                break;
+                            case 0:
+                                System.out.print("F ");
+                                break;
+                            case 1:
+                                System.out.print("S ");
+                                break;
+                            case 10:
+                                System.out.print("0 ");
+                                break;
+                            //default: just print the value of the piece
+                            default:
+                                System.out.print(array[i][j].getPieceValue() + " ");
+                                break;
+                        }
+                    }
+                }
+                System.out.println("|");
+            }
         }
     }
 
