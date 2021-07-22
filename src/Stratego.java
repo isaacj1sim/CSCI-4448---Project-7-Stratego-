@@ -34,8 +34,9 @@ public class Stratego extends Application{
     }
 
     private Parent createContent(){
+        //set a pane to place all the elements in
         Pane root = new Pane();
-        root.setPrefSize(600,600);/**/
+        root.setPrefSize(600,600);
         boxes.clear();
         for(int i = 0; i < 10; i++){
             for(int j = 0; j < 10; j++){
