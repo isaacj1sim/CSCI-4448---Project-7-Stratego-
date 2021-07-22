@@ -33,10 +33,21 @@ JUnit ver 5.7.2**
 Download JavaFX JDK & extract at - https://gluonhq.com/products/javafx/
 Add JavaFX JDK library path to IntelliJ library.
 Add this path to VM Options in IntelliJ (replace default path with your path of javafx lib): --module-path /path/to/javafx-sdk-15.0.1/lib --add-modules javafx.controls,javafx.fxml
+
+
 **Overview:**
+-Developed functional front end GUI using JavaFX
+-Integrated together Game code and GUI
+-Final version of our Stratego Game project is released. 
 
-**Issuues Expierienced:**
+**Issues Expierienced:**
+-Time Constraint for the project - A lot of work to do in so little time during Summer Schedule
+-Coordinating between team members was difficult because each of our schedules were entirely different (mostly incompatible)
+-Had to learn entirely new language with JavaFX to be able to implement a window based GUI (very difficult, lots of debugging)
 
+**Conclusion:**
+-The project was very tedious and workload intensive, especially on such a short time crunch. 
+-Learning JavaFX for the GUI implementation also had a huge learning curve that often caused a lot of headaches trying to debug code.
+-Despite this, value skills were developed on implementing OO Design Patterns into a ground up project.
 
-**Conslusion:**
 
