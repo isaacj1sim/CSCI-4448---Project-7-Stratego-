@@ -24,7 +24,7 @@
 ************************************************************************************************************************************* <br />
 <br />
 **OOAD Project Title: Project 7 - Stratego** <br />
-**Team Members: Jason Nguyen, Varunjit Srinivas, Issac Sim** <br />
+**Team Members: Jason Nguyen, Varunjit Srinivas, Isaac Sim** <br />
 
 **Software Used:** <br />
 **IntelliJ Community: ver. 2021.1.2** <br />
