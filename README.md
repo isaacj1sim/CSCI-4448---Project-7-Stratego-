@@ -20,3 +20,23 @@ JUnit ver 5.7.2**
 - We did a good job but should communicate more, especially more in detail.
 - This is a great way to apply the various patterns we learned in class thus far. 
 
+
+**OOAD Project Title: Project 7 - Stratego
+Team Members: Jason Nguyen, Varunjit Srinivas, Issac Sim**
+
+**Software Used: 
+IntelliJ Community: ver. 2021.1.2
+JavaFX
+JUnit ver 5.7.2**
+
+**Required Setup:**
+Download JavaFX JDK & extract at - https://gluonhq.com/products/javafx/
+Add JavaFX JDK library path to IntelliJ library.
+Add this path to VM Options in IntelliJ (replace default path with your path of javafx lib): --module-path /path/to/javafx-sdk-15.0.1/lib --add-modules javafx.controls,javafx.fxml
+**Overview:**
+
+**Issuues Expierienced:**
+
+
+**Conslusion:**
+
