@@ -1,6 +1,7 @@
 import java.awt.Point;
+import java.io.Serializable;
 
-public class Piece {
+public class Piece implements Serializable{
 
     /**
      * To-Do:
@@ -10,6 +11,7 @@ public class Piece {
     String pieceName;
     int number_value;
     Point position;
+    private static final long serialVersionUID = 1L;
     //whether or not the opposing player knows the value of the piece
     boolean revealed;
 

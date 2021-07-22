@@ -40,7 +40,7 @@ public class Game {
             map.setPiecePosition(pFact.getPiece(-3, "", i));
         }
 
-        map.display("");
+        //map.display("");
     }
 
     public static synchronized Game getInstance(){
@@ -64,7 +64,7 @@ public class Game {
             map.setPiecePosition(pFact.getPiece(-3, "", i));
         }
 
-        map.display("");
+        //map.display("");
     }
 
     public List<Piece> getPieces(String color){
@@ -85,11 +85,14 @@ public class Game {
     }
 
     public void display(String color){
-        map.display(color);
+        //map.display(color);
+    }
+    
+    public Cell getCell(int i, int j){
+        return map.getCell(i, j);
     }
 
-    public boolean movePiece(String color, Point start, Point end){
-        //if 
-        return true;
+    public Cell getEmptyCell(int i, int j){
+        return map.getEmptyCell(i, j);
     }
 }

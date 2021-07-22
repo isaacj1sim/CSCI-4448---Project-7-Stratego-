@@ -255,4 +255,12 @@ public class Map {
             color[prev[0]][prev[1]] = 0;
         }*/
     }
+    
+    public Cell getCell(int i, int j){
+        return array[i][j];
+    }
+
+    public Cell getEmptyCell(int i, int j){
+        return new Cell(i, j);
+    }
 }
