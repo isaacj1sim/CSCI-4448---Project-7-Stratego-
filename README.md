@@ -35,6 +35,7 @@
 - Download JavaFX JDK & extract at - https://gluonhq.com/products/javafx/
 - Add JavaFX JDK library path to IntelliJ library.
 - Add this path to VM Options in IntelliJ (replace default path with your path of javafx lib): --module-path /path/to/javafx-sdk-15.0.1/lib --add-modules -javafx.controls,javafx.fxml
+- Game code works best on Java 11 JDK Compiler
 
 
 **Overview:** <br />
