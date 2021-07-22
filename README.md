@@ -22,6 +22,7 @@
 
 ********************************************************************************************************* <br />
 ********************************************************************************************************* <br />
+<br />
 **OOAD Project Title: Project 7 - Stratego** <br />
 **Team Members: Jason Nguyen, Varunjit Srinivas, Issac Sim** <br />
 
@@ -31,9 +32,9 @@
 **JUnit ver 5.7.2** <br />
 
 **Required Setup:** <br />
-Download JavaFX JDK & extract at - https://gluonhq.com/products/javafx/
-Add JavaFX JDK library path to IntelliJ library.
-Add this path to VM Options in IntelliJ (replace default path with your path of javafx lib): --module-path /path/to/javafx-sdk-15.0.1/lib --add-modules javafx.controls,javafx.fxml
+-Download JavaFX JDK & extract at - https://gluonhq.com/products/javafx/
+-Add JavaFX JDK library path to IntelliJ library.
+-Add this path to VM Options in IntelliJ (replace default path with your path of javafx lib): --module-path /path/to/javafx-sdk-15.0.1/lib --add-modules -javafx.controls,javafx.fxml
 
 
 **Overview:** <br />
